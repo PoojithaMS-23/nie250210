@@ -11,6 +11,25 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="flight_list.html">Airline Reservation System</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="flight_list.html">Flight list</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="flight_create.html">Add flights</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
 
     <h3>List of flights</h3>
     <div class="container">
@@ -21,6 +40,7 @@
                     <th scope="col">Airline name</th>
                     <th scope="col">Source</th>
                     <th scope="col">Destination</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -29,12 +49,16 @@
                     <td class="text-primary">Air India</td>
                     <td>Mumbai</td>
                     <td>Abu Dhabi</td>
+                    <td><a href="flight_edit.html?id=10234590" class="btn btn-warning">edit</a>
+                    <button class ="btn btn-danger">delete</button></td>
                 </tr>
                 <tr>
                     <th scope="row">6E 108</th>
                     <td class="text-primary">Indigo</td>
                     <td>Bengaluru</td>
                     <td>Delhi</td>
+                    <td><a href="flight_edit.html?id=10234598" class="btn btn-warning">edit</a>
+                        <button class ="btn btn-danger">delete</button></td>
                 </tr>
 
             </tbody>
