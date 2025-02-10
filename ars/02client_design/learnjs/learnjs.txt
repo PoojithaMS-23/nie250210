@@ -1,0 +1,188 @@
+C:\Users\Poojitha\nie250210\ars\02client_design\learnjs>node
+Welcome to Node.js v22.13.1.
+Type ".help" for more information.
+> let i=1
+undefined
+> while(i<3)
+... {
+... console.log(i)
+... i++
+... }
+1
+2
+2
+> let car1=(id:'102011',Number:'KA25 T3456',model:'Ambasiter',type:'sedan')
+let car1=(id:'102011',Number:'KA25 T3456',model:'Ambasiter',type:'sedan')
+            ^
+
+Uncaught SyntaxError: Unexpected token ':'
+> let car1={id:'102011',Number:'KA25 T3456',model:'Ambasiter',type:'sedan'}
+undefined
+> car1.Number
+'KA25 T3456'
+> car1.id
+'102011'
+> car1.model
+'Ambasiter'
+> car1.type
+'sedan'
+> `My car is of ${car1.type}`
+'My car is of sedan'
+> `the id of my car is ${car1.id}`
+'the id of my car is 102011'
+> let a=10,b=20;
+undefined
+> let sum=a
+undefined
+> let sum=a+b
+Uncaught SyntaxError: Identifier 'sum' has already been declared
+> sum=a
+10
+> sum=a+b
+30
+> `the sum of a and b is ${sum}`
+'the sum of a and b is 30'
+> `the sum of a (${a}) and b (${b}) is ${sum}`
+'the sum of a (10) and b (20) is 30'
+> let salary=[1000,2000,3000];
+undefined
+> salary[0]
+1000
+> salary.push(4000,0)
+5
+> salary
+[ 1000, 2000, 3000, 4000, 0 ]
+> salary.push(40000)
+6
+> salary.push(40000)
+7
+> salary
+[
+   1000,  2000,
+   3000,  4000,
+      0, 40000,
+  40000
+]
+> let {number}=car1
+undefined
+> number
+undefined
+> let {Number}=car1
+undefined
+> Number
+'KA25 T3456'
+>> let names=['rahul dravid','vinod']
+undefined
+> let{name1,name2}=names;
+undefined
+> name1
+undefined
+> let [name1,name2]=names;
+Uncaught SyntaxError: Identifier 'name1' has already been declared
+> let {name1,name2}=names;
+Uncaught SyntaxError: Identifier 'name1' has already been declared
+> let [name4,name3]=names;
+undefined
+> name4
+'rahul dravid'
+> name3
+'vinod'
+> let salaries2=salary;
+undefined
+> salaries2[2]=0
+0
+> salaries2
+[
+   1000, 2000,     0,
+   4000,    0, 40000,
+  40000
+]
+> salary
+[
+   1000, 2000,     0,
+   4000,    0, 40000,
+  40000
+]
+> let salary2=[...salary]
+undefined
+> salary[1]=9
+9
+> salary2[1]=8
+8
+> salary2
+[
+   1000, 8,     0,
+   4000, 0, 40000,
+  40000
+]
+> salary
+[
+   1000, 9,     0,
+   4000, 0, 40000,
+  40000
+]
+>
+ let car2=car1
+undefined
+> car2.id=23
+23
+> car1
+{ id: 23, Number: 'KA25 T3456', model: 'Ambasiter', type: 'sedan' }
+> car2
+{ id: 23, Number: 'KA25 T3456', model: 'Ambasiter', type: 'sedan' }
+> let car3=[...car1]
+Uncaught TypeError: car1 is not iterable
+> let car4={...car1}
+undefined
+> car4.id=45
+45
+> car1
+{ id: 23, Number: 'KA25 T3456', model: 'Ambasiter', type: 'sedan' }
+> car4
+{ id: 45, Number: 'KA25 T3456', model: 'Ambasiter', type: 'sedan' }
+> id: 45, Number: 'KA25 T3456', model: 'Ambasiter', type: 'sedan' }
+> function findsum(first,second){
+... return first+second;
+... }
+undefined
+> findsum(1,2)
+3
+> findsum(1,209)
+210
+> function(a,b){return a+b; }(2,3)
+function(a,b){return a+b; }(2,3)
+^^^^^^^^
+
+Uncaught SyntaxError: Function statements require a function name
+> const f=function(a,b){return a+b; }(2,3)
+undefined
+> f
+5
+> const m=function{return a*b;}
+const m=function{return a*b;}
+                ^
+
+Uncaught SyntaxError: Unexpected token '{'
+> const m=function(a,b){return a*b;}
+undefined
+> m(2,3)
+6
+ const g=(a,b) =>{return a+b;}
+undefined
+> g(9,1)
+10
+ const g=(a,b) =>{return a+b;}
+undefined
+> g(9,1)
+10
+> const h=(a,b) =>a
+undefined
+> const j=(a,b)=>a+b
+undefined
+> j(7,8)
+15
+> const findsquare=a=>a*a
+undefined
+> findsquare(9)
+81
+>
