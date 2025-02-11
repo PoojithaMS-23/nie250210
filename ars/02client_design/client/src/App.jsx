@@ -1,13 +1,27 @@
+import FlightCreate from "./flight/FlightCreate"
+import FlightEdit from "./flight/FlightEdit"
+import FlightList from "./flight/FlightList"
 import Pageheader from "./header/Pageheader"
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 
 function App() {
 
   return (
     <>
-    <Pageheader/>
-     <h1>hello world</h1>
-     <p>this is poojitha</p>
+    
+    <div>
+      <BrowserRouter>
+      <Routes>
+        <Route  path="" element={<FlightList/>}/>
+        <Route  path="/flights/list" element={<FlightList/>}/>
+        <Route  path="/flights/create" element={<FlightCreate/>}/>
+        <Route  path="flights/edit/:id" element={<FlightEdit/>}/>
+        </Routes>
+        </BrowserRouter>
+    </div>
+    
+    
      
     </>
   )
