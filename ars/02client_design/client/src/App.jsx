@@ -1,3 +1,4 @@
+import Counter from "./Counter"
 import FlightCreate from "./flight/FlightCreate"
 import FlightEdit from "./flight/FlightEdit"
 import FlightList from "./flight/FlightList"
@@ -19,7 +20,9 @@ function App() {
         <Route  path="flights/edit/:id" element={<FlightEdit/>}/>
         </Routes>
         </BrowserRouter>
+        
     </div>
+    <Counter/>
     
     
      
