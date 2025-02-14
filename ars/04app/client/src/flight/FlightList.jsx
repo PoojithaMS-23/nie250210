@@ -17,6 +17,16 @@ function FlightList() {
 
     };
     useEffect(()=>{readAllFlights();},[]);//after mount and after update
+    const OnDelete = async (id) => {
+        try {
+            const baseUrl = 'http://localhost:8080'
+            const response = await axios.delete(`${baseUrl}/flights/${id}`);
+            alert(response.data.message)
+            readAllFlights();
+        } catch(error) {
+            alert('Server Error');
+        }
+    }
     return (
         <>
             <Pageheader PageNumber={1}/>
@@ -41,7 +51,7 @@ function FlightList() {
                             <td>{flight.source}</td>
                             <td>{flight.destination}</td>
                             <td><a href={`/flights/edit/${flight.id}`} className="btn btn-warning">edit</a>
-                                <button className="btn btn-danger">delete</button></td>
+                                <button className="btn btn-danger" onClick={()=>{OnDelete(flight.id);}}>delete</button></td>
                         </tr>
 
                             );
