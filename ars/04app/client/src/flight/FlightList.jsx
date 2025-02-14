@@ -18,6 +18,9 @@ function FlightList() {
     };
     useEffect(()=>{readAllFlights();},[]);//after mount and after update
     const OnDelete = async (id) => {
+        if(!confirm("are you sure?")){
+            return;
+        }
         try {
             const baseUrl = 'http://localhost:8080'
             const response = await axios.delete(`${baseUrl}/flights/${id}`);
